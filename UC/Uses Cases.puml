@@ -1,0 +1,6 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+"Dirigente Intermediário (Avaliador)" -> (Define dos Objetivos e Competências dos Trabalhadores no SIADAP)
+
+@enduml
