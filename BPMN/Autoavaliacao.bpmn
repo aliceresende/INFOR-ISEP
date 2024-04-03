@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.0.2">
+  <collaboration id="Collaboration_1ky673v">
+    <participant id="Participant_0drp8mf" name="ISEP" processRef="Process_1" />
+  </collaboration>
+  <process id="Process_1" isExecutable="false">
+    <laneSet id="LaneSet_124d87f">
+      <lane id="Lane_1fz9vxh" name="Avaliador">
+        <flowNodeRef>Activity_0shj7ck</flowNodeRef>
+      </lane>
+      <lane id="Lane_1t1bb1z" name="Avaliado">
+        <flowNodeRef>Event_0l4vcsf</flowNodeRef>
+        <flowNodeRef>Event_1sonwsp</flowNodeRef>
+        <flowNodeRef>Activity_1j64zr5</flowNodeRef>
+        <flowNodeRef>Activity_1af3hym</flowNodeRef>
+        <flowNodeRef>Event_0i8vp82</flowNodeRef>
+      </lane>
+    </laneSet>
+    <dataStoreReference id="DataStoreReference_1bgcznk" name="Plataforma GEADAP" />
+    <startEvent id="Event_0l4vcsf" name="Início da autoavaliação e da avaliação">
+      <outgoing>Flow_09yjztc</outgoing>
+    </startEvent>
+    <intermediateCatchEvent id="Event_1sonwsp" name="Primeira quinzena de fevereiro">
+      <incoming>Flow_09yjztc</incoming>
+      <outgoing>Flow_17xwl48</outgoing>
+      <timerEventDefinition id="TimerEventDefinition_0szbez5" />
+    </intermediateCatchEvent>
+    <task id="Activity_1j64zr5" name="Preenche a ficha de autoavaliação">
+      <incoming>Flow_17xwl48</incoming>
+      <outgoing>Flow_1w7wmvh</outgoing>
+    </task>
+    <task id="Activity_0shj7ck" name="Analisa a ficha de autoavaliação">
+      <incoming>Flow_1w7wmvh</incoming>
+      <outgoing>Flow_1q8tm59</outgoing>
+    </task>
+    <task id="Activity_1af3hym" name="Insere a ficha de autoavaliação na plataforma GEADAP">
+      <incoming>Flow_1q8tm59</incoming>
+      <outgoing>Flow_0duro3g</outgoing>
+      <property id="Property_0xng2ce" name="__targetRef_placeholder" />
+      <dataInputAssociation id="DataInputAssociation_0gqyolo">
+        <sourceRef>DataStoreReference_1bgcznk</sourceRef>
+        <targetRef>Property_0xng2ce</targetRef>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="Event_0i8vp82">
+      <incoming>Flow_0duro3g</incoming>
+    </endEvent>
+    <sequenceFlow id="Flow_09yjztc" sourceRef="Event_0l4vcsf" targetRef="Event_1sonwsp" />
+    <sequenceFlow id="Flow_17xwl48" sourceRef="Event_1sonwsp" targetRef="Activity_1j64zr5" />
+    <sequenceFlow id="Flow_1w7wmvh" sourceRef="Activity_1j64zr5" targetRef="Activity_0shj7ck" />
+    <sequenceFlow id="Flow_1q8tm59" sourceRef="Activity_0shj7ck" targetRef="Activity_1af3hym" />
+    <sequenceFlow id="Flow_0duro3g" sourceRef="Activity_1af3hym" targetRef="Event_0i8vp82" />
+  </process>
+  <bpmndi:BPMNDiagram id="BpmnDiagram_1">
+    <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Collaboration_1ky673v">
+      <bpmndi:BPMNShape id="Participant_0drp8mf_di" bpmnElement="Participant_0drp8mf" isHorizontal="true">
+        <omgdc:Bounds x="160" y="240" width="820" height="370" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1fz9vxh_di" bpmnElement="Lane_1fz9vxh" isHorizontal="true">
+        <omgdc:Bounds x="190" y="420" width="790" height="190" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1t1bb1z_di" bpmnElement="Lane_1t1bb1z" isHorizontal="true">
+        <omgdc:Bounds x="190" y="240" width="790" height="180" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0l4vcsf_di" bpmnElement="Event_0l4vcsf">
+        <omgdc:Bounds x="232" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="212" y="355" width="77" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1sonwsp_di" bpmnElement="Event_1sonwsp">
+        <omgdc:Bounds x="332" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="307" y="355" width="86" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1j64zr5_di" bpmnElement="Activity_1j64zr5">
+        <omgdc:Bounds x="430" y="290" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0shj7ck_di" bpmnElement="Activity_0shj7ck">
+        <omgdc:Bounds x="570" y="470" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1af3hym_di" bpmnElement="Activity_1af3hym">
+        <omgdc:Bounds x="720" y="290" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0i8vp82_di" bpmnElement="Event_0i8vp82">
+        <omgdc:Bounds x="892" y="312" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1w7wmvh_di" bpmnElement="Flow_1w7wmvh">
+        <omgdi:waypoint x="530" y="330" />
+        <omgdi:waypoint x="550" y="330" />
+        <omgdi:waypoint x="550" y="510" />
+        <omgdi:waypoint x="570" y="510" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1q8tm59_di" bpmnElement="Flow_1q8tm59">
+        <omgdi:waypoint x="670" y="510" />
+        <omgdi:waypoint x="695" y="510" />
+        <omgdi:waypoint x="695" y="330" />
+        <omgdi:waypoint x="720" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0duro3g_di" bpmnElement="Flow_0duro3g">
+        <omgdi:waypoint x="820" y="330" />
+        <omgdi:waypoint x="892" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09yjztc_di" bpmnElement="Flow_09yjztc">
+        <omgdi:waypoint x="268" y="330" />
+        <omgdi:waypoint x="332" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17xwl48_di" bpmnElement="Flow_17xwl48">
+        <omgdi:waypoint x="368" y="330" />
+        <omgdi:waypoint x="430" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="DataStoreReference_1bgcznk_di" bpmnElement="DataStoreReference_1bgcznk">
+        <omgdc:Bounds x="745" y="115" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="744" y="85" width="52" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataInputAssociation_0gqyolo_di" bpmnElement="DataInputAssociation_0gqyolo">
+        <omgdi:waypoint x="770" y="165" />
+        <omgdi:waypoint x="770" y="290" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
