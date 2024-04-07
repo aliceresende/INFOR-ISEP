@@ -1,8 +1,11 @@
 @startuml
 'https://plantuml.com/use-case-diagram
+left to right direction
+"Avaliador" --> (Regista no sistema qualquer mudança ou ajuste nos objetivos acordados)
+"Avaliador" ---> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
+"Avaliador" --> (Reformulam os objetivos)
 
-"Dirigente Intermediário (Avaliador)" -> (Define dos Objetivos e Competências dos Trabalhadores no SIADAP)
-
-"Trabalhador" -> (Identifica as oportunidades de desenvolvimento profissional)
+"Avaliado" -> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
+"Avaliado" --> (Reformulam os objetivos)
 
 @enduml
