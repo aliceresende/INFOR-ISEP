@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.0.2">
+  <collaboration id="Collaboration_1lo5oms">
+    <participant id="Participant_18jd570" name="Presidente ISEP" processRef="Process_1" />
+  </collaboration>
+  <process id="Process_1" isExecutable="false">
+    <startEvent id="Event_0a2oatn" name="Início do planeamento">
+      <outgoing>Flow_1g9ylxj</outgoing>
+    </startEvent>
+    <intermediateCatchEvent id="Event_12zqezk" name="último trimestre do ano anterior aonovo ciclo de avaliação">
+      <incoming>Flow_1g9ylxj</incoming>
+      <outgoing>Flow_16kula0</outgoing>
+      <timerEventDefinition id="TimerEventDefinition_1uxgnqm" />
+    </intermediateCatchEvent>
+    <endEvent id="Event_1stltf6" name="Fim do planeamento">
+      <incoming>Flow_1kn8u0h</incoming>
+    </endEvent>
+    <task id="Activity_1nm7n6q" name="Define os objetivos dos diferentes serviços/gabinetes">
+      <incoming>Flow_16kula0</incoming>
+      <outgoing>Flow_0ayxziu</outgoing>
+    </task>
+    <task id="Activity_0jmhbsr" name="Define os objetivos dos trabalhadores">
+      <incoming>Flow_0ayxziu</incoming>
+      <outgoing>Flow_1kn8u0h</outgoing>
+    </task>
+    <sequenceFlow id="Flow_1g9ylxj" sourceRef="Event_0a2oatn" targetRef="Event_12zqezk" />
+    <sequenceFlow id="Flow_16kula0" sourceRef="Event_12zqezk" targetRef="Activity_1nm7n6q" />
+    <sequenceFlow id="Flow_1kn8u0h" sourceRef="Activity_0jmhbsr" targetRef="Event_1stltf6" />
+    <sequenceFlow id="Flow_0ayxziu" sourceRef="Activity_1nm7n6q" targetRef="Activity_0jmhbsr" />
+  </process>
+  <bpmndi:BPMNDiagram id="BpmnDiagram_1">
+    <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Collaboration_1lo5oms">
+      <bpmndi:BPMNShape id="Participant_18jd570_di" bpmnElement="Participant_18jd570" isHorizontal="true">
+        <omgdc:Bounds x="160" y="80" width="650" height="240" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0a2oatn_di" bpmnElement="Event_0a2oatn">
+        <omgdc:Bounds x="232" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="219" y="215" width="62" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_12zqezk_di" bpmnElement="Event_12zqezk">
+        <omgdc:Bounds x="322" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="302" y="215" width="77" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1stltf6_di" bpmnElement="Event_1stltf6">
+        <omgdc:Bounds x="732" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="719" y="215" width="62" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nm7n6q_di" bpmnElement="Activity_1nm7n6q">
+        <omgdc:Bounds x="420" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jmhbsr_di" bpmnElement="Activity_0jmhbsr">
+        <omgdc:Bounds x="580" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1g9ylxj_di" bpmnElement="Flow_1g9ylxj">
+        <omgdi:waypoint x="268" y="190" />
+        <omgdi:waypoint x="322" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16kula0_di" bpmnElement="Flow_16kula0">
+        <omgdi:waypoint x="358" y="190" />
+        <omgdi:waypoint x="420" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ayxziu_di" bpmnElement="Flow_0ayxziu">
+        <omgdi:waypoint x="520" y="190" />
+        <omgdi:waypoint x="580" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kn8u0h_di" bpmnElement="Flow_1kn8u0h">
+        <omgdi:waypoint x="680" y="190" />
+        <omgdi:waypoint x="732" y="190" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
