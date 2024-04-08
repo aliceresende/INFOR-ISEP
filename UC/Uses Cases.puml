@@ -2,19 +2,21 @@
 'https://plantuml.com/use-case-diagram
 left to right direction
 "Avaliador" --> (Regista no sistema qualquer mudança ou ajuste nos objetivos acordados)
-"Avaliador" ---> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
+"Avaliador" --> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
 "Avaliador" --> (Reformulam os objetivos)
 "Avaliador" --> (Recebe e analisa a autoavaliação)
-"Avaliador" --> (Analisam a avaliação do ano anterior e discutem os próximos objetivos)
+"Avaliador" --> (Analisam a avaliação do ano anterior)
 
 "Avaliado" -> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
 "Avaliado" --> (Reformulam os objetivos)
 "Avaliado" --> (Preenche a autoavaliação)
 "Avaliado" --> (Submete a autoavaliação)
-"Avaliado" --> (Analisam a avaliação do ano anterior e discutem os próximos objetivos)
+"Avaliado" --> (Analisam a avaliação do ano anterior)
 
 "Secção Autónoma ISEP"--> (Valida as avaliações)
 
-"Presidente ISEP"--> (Define os diversos objetivos)
+"Presidente ISEP"--> (Define os diversos objetivos dos serviços/gabinetes)
+"Presidente ISEP"--> (Elabora o Plano de Atividades)
 
+"Conselho Coordenador de Avaliação"--> (Monitoriza a elaboração do plano)
 @enduml
