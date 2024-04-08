@@ -4,8 +4,17 @@ left to right direction
 "Avaliador" --> (Regista no sistema qualquer mudança ou ajuste nos objetivos acordados)
 "Avaliador" ---> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
 "Avaliador" --> (Reformulam os objetivos)
+"Avaliador" --> (Recebe e analisa a autoavaliação)
+"Avaliador" --> (Analisam a avaliação do ano anterior e discutem os próximos objetivos)
 
 "Avaliado" -> (Analisam conjuntamente o desempenho do avaliado em relação aos objetivos estabelecidos)
 "Avaliado" --> (Reformulam os objetivos)
+"Avaliado" --> (Preenche a autoavaliação)
+"Avaliado" --> (Submete a autoavaliação)
+"Avaliado" --> (Analisam a avaliação do ano anterior e discutem os próximos objetivos)
+
+"Secção Autónoma ISEP"--> (Valida as avaliações)
+
+"Presidente ISEP"--> (Define os diversos objetivos)
 
 @enduml
