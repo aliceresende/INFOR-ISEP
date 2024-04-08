@@ -125,12 +125,12 @@
         <omgdc:Bounds x="160" y="80" width="1960" height="630" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_1klfosb_di" bpmnElement="Lane_1klfosb" isHorizontal="true">
-        <omgdc:Bounds x="190" y="80" width="1930" height="230" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1ywq11l_di" bpmnElement="Lane_1ywq11l" isHorizontal="true">
         <omgdc:Bounds x="190" y="310" width="1930" height="400" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1klfosb_di" bpmnElement="Lane_1klfosb" isHorizontal="true">
+        <omgdc:Bounds x="190" y="80" width="1930" height="230" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0j4pd1w_di" bpmnElement="Activity_0j4pd1w">
@@ -182,12 +182,6 @@
         <omgdc:Bounds x="472" y="585" width="36" height="50" />
         <bpmndi:BPMNLabel>
           <omgdc:Bounds x="448" y="642" width="85" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="DataStoreReference_02y9agn_di" bpmnElement="DataStoreReference_02y9agn">
-        <omgdc:Bounds x="1265" y="595" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="1264" y="652" width="52" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1w1mi28_di" bpmnElement="Event_1w1mi28">
@@ -303,13 +297,19 @@
         <omgdi:waypoint x="1840" y="630" />
         <omgdi:waypoint x="2032" y="630" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="DataStoreReference_02y9agn_di" bpmnElement="DataStoreReference_02y9agn">
+        <omgdc:Bounds x="1265" y="755" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1264" y="812" width="52" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_1alxkqk_di" bpmnElement="DataOutputAssociation_1alxkqk">
+        <omgdi:waypoint x="1290" y="540" />
+        <omgdi:waypoint x="1290" y="755" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataInputAssociation_0ex0xpq_di" bpmnElement="DataInputAssociation_0ex0xpq">
         <omgdi:waypoint x="490" y="585" />
         <omgdi:waypoint x="490" y="520" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="DataOutputAssociation_1alxkqk_di" bpmnElement="DataOutputAssociation_1alxkqk">
-        <omgdi:waypoint x="1290" y="540" />
-        <omgdi:waypoint x="1290" y="595" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
